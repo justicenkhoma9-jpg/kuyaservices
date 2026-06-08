@@ -215,7 +215,7 @@ const About = () => {
             className="relative rounded-sm overflow-hidden shadow-2xl group"
           >
             <img 
-              src="/mission & vissoion.png" 
+              src={encodeURI("/mission & vissoion.png")} 
               alt="KUYA Professional Environment" 
               className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
             />
@@ -245,7 +245,7 @@ const Services = () => {
     },
     {
       icon: <Palette size={24} />,
-      image: "/graphic design.png",
+      image: "/graphic design-1.png",
       title: "Graphic Design",
       desc: "Creative visual solutions including branding, marketing materials, and UI/UX.",
       details: ["Logo design", "Branding", "Label Designs", "Poster designs"]
@@ -266,7 +266,7 @@ const Services = () => {
     },
     {
       icon: <Layout size={24} />,
-      image: "/website.png",
+      image: "/website-1.png",
       title: "Website Design & Development",
       desc: "Modern, responsive, and user-friendly websites tailored to your brand.",
       details: ["UI/UX", "SEO", "Responsive Design"]
@@ -294,7 +294,7 @@ const Services = () => {
     },
     {
       icon: <Brain size={24} />,
-      image: "/artificial intelligence.png",
+      image: ["/AI pic 1.png", "/AI pic 2.png"],
       title: "AI Literacy",
       desc: "Education and consulting to help you understand and leverage AI technologies.",
       details: ["AI Workshops", "Automation", "Ethics & Usage"]
@@ -319,19 +319,45 @@ const Services = () => {
               transition={{ duration: 0.5, delay: (idx % 3) * 0.1 }}
               className="group bg-white border border-slate-100 flex flex-col overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2"
             >
-              <div className="relative h-60 w-full overflow-hidden">
-                <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-500"></div>
-                <div className="absolute top-4 right-4 w-12 h-12 bg-white flex items-center justify-center text-primary shadow-lg border border-slate-100">
+              {/* Header with Title and Icon */}
+              <div className="pt-8 px-8 pb-5 flex justify-between items-start gap-4">
+                <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug">{service.title}</h3>
+                <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-primary shrink-0 border border-slate-100 shadow-sm">
                   {service.icon}
                 </div>
               </div>
+
+              {/* Image below name of service */}
+              <div className="relative h-60 w-full overflow-hidden bg-slate-50">
+                {Array.isArray(service.image) ? (
+                  <div className="grid grid-cols-2 h-full w-full gap-[2px] bg-white">
+                    {service.image.map((imgSrc, imgIdx) => (
+                      <div key={imgIdx} className="relative h-full overflow-hidden">
+                        <img 
+                          src={typeof imgSrc === "string" && imgSrc.startsWith('/') ? encodeURI(imgSrc) : imgSrc} 
+                          alt={`${service.title} part ${imgIdx + 1}`} 
+                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                          referrerPolicy="no-referrer" 
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <img 
+                    src={typeof service.image === "string" && service.image.startsWith('/') ? encodeURI(service.image) : service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    referrerPolicy="no-referrer" 
+                  />
+                )}
+                <div className="absolute inset-x-0 bottom-0 top-0 bg-primary/10 group-hover:bg-transparent transition-all duration-500 pointer-events-none"></div>
+              </div>
               
-              <div className="p-8 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors">{service.title}</h3>
+              {/* Description and Footer */}
+              <div className="p-8 flex-1 flex flex-col justify-between">
                 <p className="text-slate-600 leading-relaxed mb-6 text-sm font-medium">{service.desc}</p>
                 
-                <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
+                <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
                   <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary">Service Code: IT-{idx + 10}</span>
                   <a href="#contact" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                     <ArrowRight size={14} />
