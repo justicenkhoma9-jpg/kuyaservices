@@ -185,6 +185,23 @@ const About = () => {
               KUYA IT Solutions and Consultancy is a Lilongwe-based, privately owned ICT services company. The company is headquartered in the Biwi Area of Lilongwe and is positioned to become a leading provider of comprehensive, end-to-end technology solutions for businesses, government institutions, NGOs, schools, and individual clients across Malawi.
             </p>
             
+            {/* Mobile-only image between "About KUYA IT" text and the Vision/Mission blocks */}
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="block md:hidden mb-10 relative rounded-sm overflow-hidden shadow-2xl group"
+            >
+              <img 
+                src={encodeURI("/AboutKuya.png")} 
+                alt="About KUYA IT Solutions" 
+                className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+            </motion.div>
+            
             <div className="space-y-8">
               <div className="flex gap-6 p-6 bg-slate-50 border-l-4 border-primary">
                 <div className="shrink-0 w-12 h-12 bg-primary text-white flex items-center justify-center rounded-sm shadow-lg shadow-primary/20">
@@ -207,20 +224,39 @@ const About = () => {
             </div>
           </motion.div>
           
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative rounded-sm overflow-hidden shadow-2xl group"
-          >
-            <img 
-              src={encodeURI("/mission & vissoion.png")} 
-              alt="KUYA Professional Environment" 
-              className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
-          </motion.div>
+          <div className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="hidden md:block relative rounded-sm overflow-hidden shadow-2xl group"
+            >
+              <img 
+                src={encodeURI("/AboutKuya.png")} 
+                alt="About KUYA IT Solutions" 
+                className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="relative rounded-sm overflow-hidden shadow-2xl group"
+            >
+              <img 
+                src={encodeURI("/mission & vissoion.png")} 
+                alt="KUYA Professional Environment" 
+                className="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -233,70 +269,70 @@ const Services = () => {
       icon: <Cpu size={24} />,
       image: "/computer repair.png",
       title: "Computer Repair Service",
-      desc: "Comprehensive troubleshooting, repair, and software installation services.",
+      desc: "We specialize in comprehensive troubleshooting, professional hardware repairs, and flawless software installations to keep your devices running at peak performance.",
       details: ["PC Installation", "Software services", "Hardware services"]
     },
     {
       icon: <ShoppingCart size={24} />,
       image: "/dello,lenovo & hp.png",
       title: "Computer Sales & Orders",
-      desc: "Procurement of brand new and high-quality refurbished computers ideal for homes, offices and students.",
+      desc: "We offer top-tier brand new and premium refurbished computers, carefully selected for homes, corporate offices, and students who demand total reliability.",
       details: ["HP (all types)", "Lenovo", "Dell", "Macbook"]
     },
     {
       icon: <Palette size={24} />,
       image: "/graphic design-1.png",
       title: "Graphic Design",
-      desc: "Creative visual solutions including branding, marketing materials, and UI/UX.",
+      desc: "We transform your ideas into striking visual identities with high-impact corporate branding, stunning marketing materials, and elegant UI/UX layouts.",
       details: ["Logo design", "Branding", "Label Designs", "Poster designs"]
     },
     {
       icon: <Printer size={24} />,
       image: "/printer.png",
       title: "Printing Machine Services",
-      desc: "Professional installation, configuration, and maintenance of printing equipment.",
+      desc: "We deliver expert technical installation, precise network configuration, and dependable maintenance services for all classes of printing hardware.",
       details: ["Installation", "Replacement of parts", "Maintenance services"]
     },
     {
       icon: <Network size={24} />,
       image: "/networking solution.png",
       title: "Networking Solutions",
-      desc: "Reliable and secure LAN & WAN network infrastructure setup and maintenance.",
+      desc: "We design and deploy robust, high-security LAN & WAN network infrastructures engineered to ensure continuous and uninterrupted corporate communication.",
       details: ["Network design", "LAN/WAN/Wireless", "Cisco configuration"]
     },
     {
       icon: <Layout size={24} />,
       image: "/website-1.png",
       title: "Website Design & Development",
-      desc: "Modern, responsive, and user-friendly websites tailored to your brand.",
+      desc: "We build modern, fully responsive, and beautifully optimized websites that perfectly showcase your brand, drive customer engagement, and boost search rankings.",
       details: ["UI/UX", "SEO", "Responsive Design"]
     },
     {
       icon: <Smartphone size={24} />,
       image: "/mobile app.png",
       title: "Software & Mobile App Dev",
-      desc: "Custom applications built for iOS, Android, and cross-platform environments.",
+      desc: "We engineer customized, high-performance software and native mobile applications tailored for iOS, Android, and scalable web platforms.",
       details: ["iOS/Android", "Web Apps", "Custom Software"]
     },
     {
       icon: <BarChart size={24} />,
       image: "/data analysis.png",
       title: "Data Management & Analysis",
-      desc: "Organizing, securing, and analyzing data to drive informed business decisions.",
+      desc: "We organize, protect, and analyze complex organizational datasets to unlock powerful, action-driven insights that steer smart operations and boost profitability.",
       details: ["Data Security", "Analytical Reports", "Database Management"]
     },
     {
       icon: <GraduationCap size={24} />,
       image: "/computer training.png",
       title: "Computer Training",
-      desc: "Empowering schools and individuals with essential digital and computing skills.",
+      desc: "We empower schools, corporate teams, and individuals with specialized, practical computing programs and essential digital age skills.",
       details: ["School Programs", "Personal Training", "Office Software"]
     },
     {
       icon: <Brain size={24} />,
       image: ["/AI pic 1.png", "/AI pic 2.png"],
       title: "AI Literacy",
-      desc: "Education and consulting to help you understand and leverage AI technologies.",
+      desc: "We guide your team through the future of work with tailored workshops and strategic consulting on leveraging AI technologies to automate and multiply productivity.",
       details: ["AI Workshops", "Automation", "Ethics & Usage"]
     }
   ];
