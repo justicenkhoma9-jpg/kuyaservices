@@ -7,7 +7,7 @@
   
   --color-background: #ffffff;
   --color-primary: #1d4289; /* Unicaf Blue equivalent */
-  --color-secondary: #cc3333; /* Unicaf Red equivalent */
+  --color-secondary: #f97316; /* Vibrant Orange */
   --color-surface: #f8fafc;
   --color-surface-hover: #f1f5f9;
 }
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background-color: #b32d2d;
+  background-color: #ea580c;
   transform: translateY(-1px);
 }
 

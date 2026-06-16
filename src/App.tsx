@@ -52,7 +52,7 @@ const Navbar = () => {
         CONNECTING MALAWI &bull; SECURING THE FUTURE &bull; DELIVERING EXCELLENCE
       </div>
 
-      <div className={`transition-all duration-300 ${scrolled ? 'bg-primary border-b border-white/10 shadow-xl py-2.5' : 'bg-primary border-b border-white/10 py-3.5'}`}>
+      <div className={`transition-all duration-300 ${scrolled ? 'bg-white border-b border-slate-200 shadow-xl py-2.5' : 'bg-white border-b border-slate-100 py-3.5'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="relative h-10 md:h-14 transition-all duration-300 flex items-center justify-center group">
@@ -68,13 +68,13 @@ const Navbar = () => {
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
                     <Terminal size={24} className="text-white" />
                   </div>
-                  <span className="font-display font-extrabold text-2xl tracking-tighter text-white">KUYA IT</span>
+                  <span className="font-display font-extrabold text-2xl tracking-tighter text-slate-900">KUYA IT</span>
                 </div>
               )}
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-10 text-[13px] font-bold uppercase tracking-wider text-slate-100">
+          <div className="hidden md:flex items-center gap-10 text-[13px] font-bold uppercase tracking-wider text-slate-800">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
             <a href="#about" className="hover:text-secondary transition-colors">About Us</a>
             <a href="#contact" className="btn-secondary px-6 text-xs shadow-lg shadow-secondary/20 uppercase">
@@ -82,7 +82,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <button className="md:hidden text-white hover:text-secondary" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-slate-800 hover:text-secondary" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -90,9 +90,9 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-primary border-t border-white/10 py-6 px-6 flex flex-col gap-4 shadow-xl">
-          <a href="#services" className="text-white font-bold uppercase text-sm hover:text-secondary" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#about" className="text-white font-bold uppercase text-sm hover:text-secondary" onClick={() => setIsOpen(false)}>About Us</a>
+        <div className="md:hidden bg-white border-t border-slate-100 py-6 px-6 flex flex-col gap-4 shadow-xl">
+          <a href="#services" className="text-slate-800 font-bold uppercase text-sm hover:text-secondary" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#about" className="text-slate-800 font-bold uppercase text-sm hover:text-secondary" onClick={() => setIsOpen(false)}>About Us</a>
           <a href="#contact" className="btn-secondary text-center uppercase text-sm" onClick={() => setIsOpen(false)}>Let's Get in Touch</a>
         </div>
       )}
@@ -193,7 +193,7 @@ const MotionHero = () => {
               className="text-4xl md:text-5xl lg:text-5.5xl font-display font-black leading-[1.05] mb-6 uppercase tracking-tight text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]"
             >
               ONE-STOP <br />
-              SERVICE <span className="text-secondary drop-shadow-[0_2px_10px_rgba(204,51,51,0.6)]">HUB</span>
+              SERVICE <span className="text-secondary drop-shadow-[0_2px_10px_rgba(249,115,22,0.6)]">HUB</span>
             </motion.h1>
             
             <motion.p 
