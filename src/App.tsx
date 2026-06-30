@@ -573,100 +573,100 @@ const Process = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative bg-primary border-b border-white/10 text-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="bg-[#132c5c] border border-white/15 rounded-2xl p-8 md:p-20 relative overflow-hidden shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-20 relative z-10">
+    <section id="contact" className="py-16 md:py-24 relative bg-primary border-b border-white/10 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="bg-[#132c5c] border border-white/15 rounded-2xl p-5 sm:p-10 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 relative z-10">
             <div>
-              <h2 className="section-title text-3xl md:text-5xl font-display font-extrabold uppercase mb-8 text-white">Get in touch</h2>
-              <p className="text-slate-100 text-lg mb-12 max-w-md font-semibold leading-relaxed">
+              <h2 className="section-title text-2xl sm:text-3xl md:text-5xl font-display font-extrabold uppercase mb-6 md:mb-8 text-white">Get in touch</h2>
+              <p className="text-slate-100 text-base md:text-lg mb-8 md:mb-12 max-w-md font-semibold leading-relaxed">
                 Professional ICT support is just a message away. Our team is ready to analyze your technical needs and deliver excellence.
               </p>
               
-              <div className="space-y-8">
-                <div className="group flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
-                    <MapPin size={24} />
+              <div className="space-y-6 md:space-y-8">
+                <div className="group flex items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
+                    <MapPin size={22} className="sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <div className="text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-2">Our Headquarters</div>
-                    <div className="text-white font-bold text-lg">Biwi Area, Lilongwe, Malawi</div>
+                    <div className="text-[11px] sm:text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-1 sm:mb-2">Our Headquarters</div>
+                    <div className="text-white font-bold text-base sm:text-lg">Biwi Area, Lilongwe, Malawi</div>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
-                    <Globe size={24} />
+                <div className="group flex items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
+                    <Globe size={22} className="sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <div className="text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-2">Website</div>
-                    <div className="text-white font-bold text-lg">www.kuyaservices.com</div>
+                    <div className="text-[11px] sm:text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-1 sm:mb-2">Website</div>
+                    <div className="text-white font-bold text-base sm:text-lg">www.kuyaservices.com</div>
                   </div>
                 </div>
-                <div className="group flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
-                    <Phone size={24} />
+                <div className="group flex items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0f2143] border border-white/15 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shrink-0">
+                    <Phone size={22} className="sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <div className="text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-2">Call & Support</div>
-                    <div className="text-white font-bold text-lg">+265 996 197 463</div>
-                    <div className="text-white font-bold text-lg">+265 884 126 001</div>
+                    <div className="text-[11px] sm:text-[13px] text-secondary uppercase tracking-widest font-extrabold mb-1 sm:mb-2">Call & Support</div>
+                    <div className="text-white font-bold text-base sm:text-lg">+265 996 197 463</div>
+                    <div className="text-white font-bold text-base sm:text-lg">+265 884 126 001</div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-[#0d1e3d] p-8 md:p-12 border border-white/15 rounded-xl">
-              <h3 className="text-xl font-bold mb-8 uppercase tracking-tight text-white">Service Request Form</h3>
+            <div className="bg-[#0d1e3d] p-5 sm:p-8 md:p-12 border border-white/15 rounded-xl">
+              <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8 uppercase tracking-tight text-white">Service Request Form</h3>
               <form 
                 action="https://formspree.io/f/xdayqqoz" 
                 method="POST"
-                className="space-y-6"
+                className="space-y-5 sm:space-y-6"
               >
                 {/* Formspree Configuration */}
                 <input type="hidden" name="_subject" value="New Service Request from KUYA IT Website" />
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div className="space-y-2">
-                    <label className="text-[12px] font-bold uppercase tracking-widest text-slate-100">First Name</label>
+                    <label className="text-[11px] sm:text-[12px] font-bold uppercase tracking-widest text-slate-100">First Name</label>
                     <input 
                       type="text" 
                       name="firstName"
                       required
-                      className="w-full bg-[#0f2143] border border-white/15 px-4 py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
+                      className="w-full bg-[#0f2143] border border-white/15 px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[12px] font-bold uppercase tracking-widest text-slate-100">Last Name</label>
+                    <label className="text-[11px] sm:text-[12px] font-bold uppercase tracking-widest text-slate-100">Last Name</label>
                     <input 
                       type="text" 
                       name="lastName"
                       required
-                      className="w-full bg-[#0f2143] border border-white/15 px-4 py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
+                      className="w-full bg-[#0f2143] border border-white/15 px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[12px] font-bold uppercase tracking-widest text-slate-100">Professional Email</label>
+                  <label className="text-[11px] sm:text-[12px] font-bold uppercase tracking-widest text-slate-100">Professional Email</label>
                   <input 
                     type="email" 
                     name="email"
                     required
-                    className="w-full bg-[#0f2143] border border-white/15 px-4 py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
+                    className="w-full bg-[#0f2143] border border-white/15 px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-secondary transition-colors text-sm rounded-md font-medium" 
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[12px] font-bold uppercase tracking-widest text-slate-100">Project Details</label>
+                  <label className="text-[11px] sm:text-[12px] font-bold uppercase tracking-widest text-slate-100">Project Details</label>
                   <textarea 
                     name="message"
                     required
                     rows={4} 
-                    className="w-full bg-[#0f2143] border border-white/15 px-4 py-4 text-white focus:outline-none focus:border-secondary transition-colors resize-none text-sm rounded-md font-medium"
+                    className="w-full bg-[#0f2143] border border-white/15 px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-secondary transition-colors resize-none text-sm rounded-md font-medium"
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
-                  className="btn-secondary w-full py-5 rounded-sm uppercase tracking-widest text-sm shadow-xl shadow-secondary/20 cursor-pointer"
+                  className="btn-secondary w-full py-4 sm:py-5 rounded-sm uppercase tracking-widest text-xs sm:text-sm shadow-xl shadow-secondary/20 cursor-pointer"
                 >
                   Submit Request
                 </button>
